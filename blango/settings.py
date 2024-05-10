@@ -30,6 +30,8 @@ class Dev(Configuration):
     # SECURITY WARNING: don't run with debug turned on in production!
     DEBUG = True
 
+    AUTH_USER_MODEL = "blango_auth.User"
+
     # ALLOWED_HOSTS = []
     # codio
     ALLOWED_HOSTS = values.ListValue(["localhost", "0.0.0.0", ".codio.io"])
@@ -57,6 +59,7 @@ class Dev(Configuration):
         'crispy_forms',
         'crispy_bootstrap5',
         'debug_toolbar',
+        'blango_auth',
     ]
 
     MIDDLEWARE = [
