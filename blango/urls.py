@@ -27,6 +27,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('', blog.views.index),
     path("ip/", blog.views.get_ip),
+    path("post-table/", blog.views.post_table, name="blog-post-table"),
     path("post/<slug>/", blog.views.post_detail, name="blog-post-detail"),
     path(
         "accounts/register/",
